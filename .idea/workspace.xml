@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="rails new">
-      <change afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="init proper lol">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/subreddit_moderator.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user_subscription.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230304140933_devise_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230304140933_devise_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/void/Desktop/dev/reddit-clone-but-on-rails",
     "node.js.detected.package.eslint": "true",
@@ -43,6 +52,14 @@
     "ruby.rails.projectView.checked": "true",
     "ruby.structure.view.model.defaults.configured": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
+    ]
   }
 }]]></component>
   <component name="RubyModuleManagerSettings">
@@ -261,7 +278,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677936963099</updated>
       <workItem from="1677936964154" duration="438000" />
-      <workItem from="1677937407662" duration="1949000" />
+      <workItem from="1677937407662" duration="7760000" />
     </task>
     <task id="LOCAL-00001" summary="rails new">
       <created>1677937255096</created>
@@ -270,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677937255096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init proper lol">
+      <created>1677939624081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677939624081</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +305,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -289,6 +325,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rails new" />
-    <option name="LAST_COMMIT_MESSAGE" value="rails new" />
+    <MESSAGE value="init proper lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="init proper lol" />
   </component>
 </project>

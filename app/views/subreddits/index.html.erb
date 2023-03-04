@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Subreddits</h1>
+
+<div id="subreddits">
+  <% @subreddits.each do |subreddit| %>
+    <%= render subreddit %>
+    <p>
+      <%= link_to "Show this subreddit", subreddit %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New subreddit", new_subreddit_path %>
