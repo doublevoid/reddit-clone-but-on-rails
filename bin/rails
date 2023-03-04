@@ -1,0 +1,4 @@
+#!/home/void/.rbenv/versions/3.2.1/bin/ruby/
+APP_PATH = File.expand_path("../config/application", __dir__)
+require_relative "../config/boot"
+require "rails/commands"
