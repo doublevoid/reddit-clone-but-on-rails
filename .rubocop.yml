@@ -1,0 +1,43 @@
+require: rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - '.git/**/*'
+    - 'db/schema.rb'
+    - 'bin/bundle'
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "app/admin/**/*.rb"
+
+Naming/VariableNumber:
+  Enabled: false
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/FilePath:
+  Exclude:
+    - 'spec/modules/api/resources/**/*.rb'
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+
+Style/ModuleFunction:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
