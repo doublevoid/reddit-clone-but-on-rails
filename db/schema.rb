@@ -10,19 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_04_145757) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_04_165722) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "comment_votes", force: :cascade do |t|
-    t.integer "value", default: 1
-    t.bigint "user_id", null: false
-    t.bigint "comment_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_comment_votes_on_comment_id"
-    t.index ["user_id"], name: "index_comment_votes_on_user_id"
-  end
 
   create_table "comments", force: :cascade do |t|
     t.string "body"
@@ -32,16 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_145757) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "post_votes", force: :cascade do |t|
-    t.integer "value", default: 1
-    t.bigint "user_id", null: false
-    t.bigint "post_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_post_votes_on_post_id"
-    t.index ["user_id"], name: "index_post_votes_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -100,16 +80,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_145757) do
     t.index ["username"], name: "unique_username", unique: true
   end
 
-  add_foreign_key "comment_votes", "comments"
-  add_foreign_key "comment_votes", "users"
+  create_table "votes", force: :cascade do |t|
+    t.integer "value"
+    t.string "voteable_type"
+    t.integer "voteable_id"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_votes_on_user_id"
+  end
+
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "post_votes", "posts"
-  add_foreign_key "post_votes", "users"
   add_foreign_key "posts", "subreddits"
   add_foreign_key "posts", "users"
   add_foreign_key "subreddit_moderators", "subreddits"
   add_foreign_key "subreddit_moderators", "users"
   add_foreign_key "user_subscriptions", "subreddits"
   add_foreign_key "user_subscriptions", "users"
+  add_foreign_key "votes", "users"
 end

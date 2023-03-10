@@ -1,13 +1,27 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show edit update destroy]
+  before_action :set_post, only: %i[edit update destroy]
 
   # GET /posts or /posts.json
-  def index
-    @posts = Post.all
+  def subreddit_posts
+    @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
+                                       .select('sum(votes.value) as karma, posts.*')
+                                       .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
+                                       .order('sum(votes.value) asc'), items: 25)
   end
 
   # GET /posts/1 or /posts/1.json
-  def show; end
+  def show
+    @post = Post.eager_load(:votes, :subreddit, :user, :comments)
+                .select('sum(votes.value) as karma, posts.*')
+                .where(id: params[:id])
+                .group('posts.id, subreddits.id, votes.id, users.id, comments.id')
+                .order('sum(votes.value) asc')[0]
+
+    @pagy, @comments = pagy_countless(@post.comments.eager_load(:user, :votes)
+                                           .select('sum(votes.value) as karma, comments.*')
+                                           .group('comments.id, users.id, votes.id')
+                                           .order('sum(votes.value) asc'), items: 25)
+  end
 
   # GET /posts/new
   def new

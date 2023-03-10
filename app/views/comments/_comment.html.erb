@@ -1,5 +1,10 @@
 <div id="<%= dom_id comment %>">
   <p>
+    <strong>Karma:</strong>
+    <%= comment.karma %>
+  </p>
+
+  <p>
     <strong>Body:</strong>
     <%= comment.body %>
   </p>
@@ -11,7 +16,7 @@
 
   <p>
     <strong>User:</strong>
-    <%= comment.user_id %>
+    <%= comment.user.username %>
   </p>
 
 </div>

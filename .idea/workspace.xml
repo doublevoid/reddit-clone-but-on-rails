@@ -4,16 +4,81 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="init proper lol">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/subreddit_moderator.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_subscription.rb" afterDir="false" />
+    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="scaffolding a bunch of stuff, probably removing a bunch later">
+      <change afterPath="$PROJECT_DIR$/app/models/concerns/voteable.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/subreddits/all.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/pagy.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/reddit-clone-but-on-rails.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reddit-clone-but-on-rails.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/comment_votes_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/post_votes_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/subreddits_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/subreddits_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/comment_votes_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/post_votes_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comment_vote.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post_vote.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/_comment_vote.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/_comment_vote.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/_post_vote.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/_post_vote.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/post_votes/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/_post.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_post.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_subreddit_posts.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/subreddit_posts.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/subreddits/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/subreddits/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20230304140933_devise_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230304140933_devise_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230304145747_create_post_votes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230304145757_create_comment_votes.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/helpers/comment_votes_helper_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/helpers/post_votes_helper_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/comment_vote_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/post_vote_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/comment_votes_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/comments_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/comments_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/post_votes_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/posts_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/posts_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/requests/subreddits_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/subreddits_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/routing/comment_votes_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/routing/comments_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/comments_routing_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/routing/post_votes_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/routing/posts_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/posts_routing_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/routing/subreddits_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/subreddits_routing_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/edit.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/index.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/new.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/show.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/comments/index.html.erb_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/views/comments/index.html.erb_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/edit.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/index.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/new.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/show.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/posts/index.html.erb_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/views/posts/subreddit_posts.html.erb_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/views/subreddits/index.html.erb_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/views/subreddits/index.html.erb_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,31 +102,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/void/Desktop/dev/reddit-clone-but-on-rails",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/void/Desktop/dev/reddit-clone-but-on-rails&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
@@ -78,7 +143,11 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
@@ -107,7 +176,11 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
@@ -132,7 +205,11 @@
       <RACK_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RACK_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RACK_CONFIG_SETTINGS_ID NAME="PORT" VALUE="9292" />
       <RACK_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
@@ -172,7 +249,11 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -239,7 +320,11 @@
       <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
@@ -253,7 +338,11 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
@@ -278,7 +367,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677936963099</updated>
       <workItem from="1677936964154" duration="438000" />
-      <workItem from="1677937407662" duration="7760000" />
+      <workItem from="1677937407662" duration="10596000" />
+      <workItem from="1678455770820" duration="11585000" />
     </task>
     <task id="LOCAL-00001" summary="rails new">
       <created>1677937255096</created>
@@ -294,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677939624081</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="scaffolding a bunch of stuff, probably removing a bunch later">
+      <created>1677945214244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677945214244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +423,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rails new" />
     <MESSAGE value="init proper lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="init proper lol" />
+    <MESSAGE value="scaffolding a bunch of stuff, probably removing a bunch later" />
+    <option name="LAST_COMMIT_MESSAGE" value="scaffolding a bunch of stuff, probably removing a bunch later" />
   </component>
 </project>

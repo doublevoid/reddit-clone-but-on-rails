@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :comment_votes
-  resources :post_votes
+  resources :votes
   resources :comments
   resources :posts
-  resources :subreddits
+  get '/r/all', to: 'subreddits#all'
+  resources :subreddits, path: 'r'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  # root "articles#subreddit_posts"
 end

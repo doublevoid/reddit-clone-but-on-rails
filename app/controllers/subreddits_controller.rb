@@ -1,5 +1,5 @@
 class SubredditsController < ApplicationController
-  before_action :set_subreddit, only: %i[show edit update destroy]
+  before_action :set_subreddit, only: %i[edit update destroy]
 
   # GET /subreddits or /subreddits.json
   def index
@@ -7,7 +7,23 @@ class SubredditsController < ApplicationController
   end
 
   # GET /subreddits/1 or /subreddits/1.json
-  def show; end
+  def show
+    @subreddit_name = params[:id]
+    @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
+                                       .select('sum(votes.value) as karma, posts.*')
+                                       .where('subreddits.name = ?', params[:id])
+                                       .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
+                                       .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
+  end
+
+  # GET /subreddits/all
+  def all
+    @subreddit_name = 'all'
+    @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
+                                       .select('sum(votes.value) as karma, posts.*')
+                                       .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
+                                       .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
+  end
 
   # GET /subreddits/new
   def new

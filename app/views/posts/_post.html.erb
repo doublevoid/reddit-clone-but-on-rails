@@ -1,4 +1,6 @@
 <div id="<%= dom_id post %>">
+    <%= post.karma || 0 %>
+
   <p>
     <strong>Title:</strong>
     <%= post.title %>
@@ -11,12 +13,16 @@
 
   <p>
     <strong>Subreddit:</strong>
-    <%= post.subreddit_id %>
+    <%= post.subreddit.name %>
   </p>
 
   <p>
     <strong>User:</strong>
-    <%= post.user_id %>
+    <%= post.user.username %>
+  </p>
+
+  <p>
+    <%= pluralize(post.comments.size, 'comment')%>
   </p>
 
 </div>

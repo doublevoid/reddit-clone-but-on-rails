@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'subreddits/index', type: :view do
+RSpec.describe 'subreddits/subreddit_posts', type: :view do
   before do
     assign(:subreddits, [
              Subreddit.create!(

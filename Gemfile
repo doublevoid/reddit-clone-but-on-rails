@@ -71,3 +71,5 @@ group :development do
   gem 'rubocop', '~> 1.47', require: false
   gem 'rubocop-rspec', require: false
 end
+
+gem "pagy", "~> 6.0"

@@ -24,7 +24,7 @@ RSpec.describe '/comments', type: :request do
     skip('Add a hash of attributes invalid for your model')
   end
 
-  describe 'GET /index' do
+  describe 'GET /subreddit_posts' do
     it 'renders a successful response' do
       Comment.create! valid_attributes
       get comments_url

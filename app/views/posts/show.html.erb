@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @post %>
+<% @comments.each do |comment| %>
+  <%= render comment %>
+<% end %>
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |

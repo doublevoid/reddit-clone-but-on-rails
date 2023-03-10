@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CommentsController, type: :routing do
   describe 'routing' do
-    it 'routes to #index' do
+    it 'routes to #subreddit_posts' do
       expect(get: '/comments').to route_to('comments#index')
     end
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe SubredditsController, type: :routing do
   describe 'routing' do
-    it 'routes to #index' do
+    it 'routes to #subreddit_posts' do
       expect(get: '/subreddits').to route_to('subreddits#index')
     end
 
