@@ -4,81 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="scaffolding a bunch of stuff, probably removing a bunch later">
-      <change afterPath="$PROJECT_DIR$/app/models/concerns/voteable.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/subreddits/all.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/initializers/pagy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reddit-clone-but-on-rails.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reddit-clone-but-on-rails.iml" afterDir="false" />
+    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="well I guess I haven't been using version control properly">
+      <change afterPath="$PROJECT_DIR$/app/controllers/user_pages_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/entry.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/user_pages/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/comment_votes_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/post_votes_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/subreddits_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/subreddits_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/comment_votes_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/post_votes_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment_vote.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post_vote.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/_comment_vote.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/_comment_vote.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comment_votes/show.json.jbuilder" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/_post_vote.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/_post_vote.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/post_votes/show.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/_post.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_post.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_subreddit_posts.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/subreddit_posts.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/subreddits/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/subreddits/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/pagy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/pagy.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230304140933_devise_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230304140933_devise_create_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230304145747_create_post_votes.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230304145757_create_comment_votes.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/helpers/comment_votes_helper_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/helpers/post_votes_helper_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/comment_vote_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/post_vote_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/comment_votes_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/comments_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/comments_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/post_votes_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/posts_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/posts_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/subreddits_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/subreddits_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/routing/comment_votes_routing_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/routing/comments_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/comments_routing_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/routing/post_votes_routing_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/routing/posts_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/posts_routing_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/routing/subreddits_routing_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/routing/subreddits_routing_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/edit.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/index.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/new.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/comment_votes/show.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/comments/index.html.erb_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/views/comments/index.html.erb_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/edit.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/index.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/new.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/post_votes/show.html.erb_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/posts/index.html.erb_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/views/posts/subreddit_posts.html.erb_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/views/subreddits/index.html.erb_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/views/subreddits/index.html.erb_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,31 +39,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/void/Desktop/dev/reddit-clone-but-on-rails&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/void/Desktop/dev/reddit-clone-but-on-rails",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
@@ -368,7 +306,7 @@
       <updated>1677936963099</updated>
       <workItem from="1677936964154" duration="438000" />
       <workItem from="1677937407662" duration="10596000" />
-      <workItem from="1678455770820" duration="11585000" />
+      <workItem from="1678455770820" duration="31966000" />
     </task>
     <task id="LOCAL-00001" summary="rails new">
       <created>1677937255096</created>
@@ -391,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677945214244</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="well I guess I haven't been using version control properly">
+      <created>1678468012428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678468012428</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,6 +369,7 @@
     <MESSAGE value="rails new" />
     <MESSAGE value="init proper lol" />
     <MESSAGE value="scaffolding a bunch of stuff, probably removing a bunch later" />
-    <option name="LAST_COMMIT_MESSAGE" value="scaffolding a bunch of stuff, probably removing a bunch later" />
+    <MESSAGE value="well I guess I haven't been using version control properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="well I guess I haven't been using version control properly" />
   </component>
 </project>

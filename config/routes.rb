@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :posts
   get '/r/all', to: 'subreddits#all'
   resources :subreddits, path: 'r'
+  resources :user_pages, path: 'u'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

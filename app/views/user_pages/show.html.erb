@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>User <%=@user.username %></h1>
+Post karma: <%= @user.post_karma %>
+Comment karma: <%= @user.comment_karma %>
+
+<div id="comments">
+  <% @overall.each do |entry| %>
+    <%#= debugger if entry.entryable_type == 'Comment' %>
+    <%= render "comments/comment", comment: entry if entry.class.name == 'Comment' %>
+    <%= render "posts/post", post: entry if entry.class.name == 'Post' %>
+  <% end %>
+</div>
+
+<%= link_to "New comment", new_comment_path %>

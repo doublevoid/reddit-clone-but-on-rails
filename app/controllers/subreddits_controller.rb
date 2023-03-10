@@ -6,7 +6,7 @@ class SubredditsController < ApplicationController
     @subreddits = Subreddit.all
   end
 
-  # GET /subreddits/1 or /subreddits/1.json
+  # GET /r/1 or /r/1.json
   def show
     @subreddit_name = params[:id]
     @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
@@ -16,7 +16,7 @@ class SubredditsController < ApplicationController
                                        .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
   end
 
-  # GET /subreddits/all
+  # GET /r/all
   def all
     @subreddit_name = 'all'
     @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
