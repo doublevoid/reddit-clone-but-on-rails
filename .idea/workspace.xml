@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="well I guess I haven't been using version control properly">
-      <change afterPath="$PROJECT_DIR$/app/controllers/user_pages_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/entry.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/user_pages/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/subreddits_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/subreddits_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/pagy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/pagy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="some more stuff">
+      <change beforePath="$PROJECT_DIR$/app/views/user_pages/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_pages/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +296,7 @@
       <updated>1677936963099</updated>
       <workItem from="1677936964154" duration="438000" />
       <workItem from="1677937407662" duration="10596000" />
-      <workItem from="1678455770820" duration="31966000" />
+      <workItem from="1678455770820" duration="31989000" />
     </task>
     <task id="LOCAL-00001" summary="rails new">
       <created>1677937255096</created>
@@ -336,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678468012428</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="some more stuff">
+      <created>1678489972471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678489972471</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +367,7 @@
     <MESSAGE value="init proper lol" />
     <MESSAGE value="scaffolding a bunch of stuff, probably removing a bunch later" />
     <MESSAGE value="well I guess I haven't been using version control properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="well I guess I haven't been using version control properly" />
+    <MESSAGE value="some more stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="some more stuff" />
   </component>
 </project>
