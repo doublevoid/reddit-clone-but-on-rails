@@ -1,0 +1,17 @@
+<%= form_with(model: user_subscription) do |form| %>
+  <% if user_subscription.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user_subscription.errors.count, "error") %> prohibited this user_subscription from being saved:</h2>
+
+      <ul>
+        <% user_subscription.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

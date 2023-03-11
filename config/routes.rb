@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :user_subscriptions
   resources :votes
   resources :comments
   resources :posts
+  get '/', to: 'subreddits#frontpage'
   get '/r/all', to: 'subreddits#all'
   resources :subreddits, path: 'r'
   resources :user_pages, path: 'u'

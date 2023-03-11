@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>User subscriptions</h1>
+
+<div id="user_subscriptions">
+  <% @user_subscriptions.each do |user_subscription| %>
+    <%= render user_subscription %>
+    <p>
+      <%= link_to "Show this user subscription", user_subscription %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user subscription", new_user_subscription_path %>

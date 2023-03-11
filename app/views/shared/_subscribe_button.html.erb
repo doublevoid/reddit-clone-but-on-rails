@@ -1,0 +1,6 @@
+<div id=<%= dom_id @subreddit %>>
+  <%= form_with model: UserSubscription.new do |form| %>
+    <%=form.hidden_field :subreddit_id, value:@subreddit.id %>
+    <%=form.submit "join"%>
+  <%end%>
+</div>

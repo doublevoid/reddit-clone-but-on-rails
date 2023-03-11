@@ -8,12 +8,12 @@ class SubredditsController < ApplicationController
 
   # GET /r/1 or /r/1.json
   def show
-    @subreddit_name = params[:id]
     @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
                                        .select('sum(votes.value) as karma, posts.*')
                                        .where('subreddits.name = ?', params[:id])
                                        .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
                                        .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
+    @subreddit = Subreddit.find_by(name: params[:id])
   end
 
   # GET /r/all
@@ -23,6 +23,17 @@ class SubredditsController < ApplicationController
                                        .select('sum(votes.value) as karma, posts.*')
                                        .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
                                        .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
+  end
+
+  # GET /
+  def frontpage
+    @subreddit_name = ''
+    @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
+                                      .select('sum(votes.value) as karma, posts.*')
+                                      .where('posts.subreddit_id': UserSubscription.where(user: current_user).map(&:subreddit_id))
+                                      .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
+                                      .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
+    # debugger
   end
 
   # GET /subreddits/new
