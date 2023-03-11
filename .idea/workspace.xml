@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="some more stuff">
-      <change beforePath="$PROJECT_DIR$/app/views/user_pages/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_pages/show.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="83866d03-8357-4ce7-b6ec-f8851eb095e8" name="Changes" comment="remove comment" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -296,7 +294,7 @@
       <updated>1677936963099</updated>
       <workItem from="1677936964154" duration="438000" />
       <workItem from="1677937407662" duration="10596000" />
-      <workItem from="1678455770820" duration="31989000" />
+      <workItem from="1678455770820" duration="32140000" />
     </task>
     <task id="LOCAL-00001" summary="rails new">
       <created>1677937255096</created>
@@ -333,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678489972471</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove comment">
+      <created>1678489989586</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678489989586</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +373,7 @@
     <MESSAGE value="scaffolding a bunch of stuff, probably removing a bunch later" />
     <MESSAGE value="well I guess I haven't been using version control properly" />
     <MESSAGE value="some more stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="some more stuff" />
+    <MESSAGE value="remove comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove comment" />
   </component>
 </project>
