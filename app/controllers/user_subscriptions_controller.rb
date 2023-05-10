@@ -15,13 +15,13 @@ class UserSubscriptionsController < ApplicationController
       if @user_subscription.save
         format.turbo_stream do
           render turbo_stream: turbo_stream.replace(ActionView::RecordIdentifier.dom_id(@user_subscription.subreddit),
-                                                    partial: "shared/unsubscribe_button",
-                                                    locals: {subscription: @user_subscription})
+                                                    partial: 'shared/unsubscribe_button',
+                                                    locals:  { subscription: @user_subscription })
         end
 
         format.html do
           redirect_to subreddit_path(@user_subscription.subreddit.name),
-                      notice: "User subscription was successfully created."
+                      notice: 'User subscription was successfully created.'
         end
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -37,14 +37,16 @@ class UserSubscriptionsController < ApplicationController
 
     respond_to do |format|
       format.turbo_stream do
-        render turbo_stream: turbo_stream.replace(ActionView::RecordIdentifier.dom_id(@user_subscription), partial: "shared/subscribe_button")
+        render turbo_stream: turbo_stream.replace(ActionView::RecordIdentifier.dom_id(@user_subscription),
+                                                  partial: 'shared/subscribe_button')
       end
-      format.html { redirect_to user_subscriptions_url, notice: "User subscription was successfully destroyed." }
+      format.html { redirect_to user_subscriptions_url, notice: 'User subscription was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_user_subscription
     @user_subscription = UserSubscription.find(params[:id])

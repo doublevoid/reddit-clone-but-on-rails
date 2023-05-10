@@ -10,10 +10,12 @@ class SubredditsController < ApplicationController
   def show
     @pagy, @posts = pagy_countless(Post.eager_load(:comments, :votes, :subreddit, :user)
                                        .select('sum(votes.value) as karma, posts.*')
-                                       .where('subreddits.name = ?', params[:id])
+                                       .where('subreddits.name = ?', params[:subreddit_name])
                                        .group('posts.id, comments.id, subreddits.id, votes.id, users.id')
-                                       .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 50)
-    @subreddit = Subreddit.find_by(name: params[:id])
+                                       .order('sum(votes.value) asc, count(comments) desc, title asc'), items: 25)
+    @subreddit = Subreddit.eager_load(:user_subscriptions)
+                          .where(name: params[:subreddit_name])
+                          .where('user_subscriptions.user_id =? OR user_subscriptions.user_id IS NULL', 1)[0]
   end
 
   # GET /r/all
@@ -86,7 +88,7 @@ class SubredditsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_subreddit
-    @subreddit = Subreddit.find(params[:id])
+    @subreddit = Subreddit.find(params[:subreddit_name])
   end
 
   # Only allow a list of trusted parameters through.

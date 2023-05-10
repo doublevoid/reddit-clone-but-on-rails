@@ -1,8 +1,8 @@
 <%if !@subreddit.nil? && @subreddit&.name != 'all' && @subreddit&.name != ''  %>
 <div class="side">
   <h1> <%=@subreddit.name %></h1>
-  <% if @subreddit.user_subscriptions.find_by(user:User.last)%>
-    <%=render "shared/unsubscribe_button", subscription: @subreddit.user_subscriptions.find_by(user:User.last) %>
+  <% if @subreddit.user_subscriptions[0]%>
+    <%=render "shared/unsubscribe_button", subscription: @subreddit.user_subscriptions[0] %>
   <%else %>
     <%=render "shared/subscribe_button", subreddit: @subreddit %>
   <%end %>

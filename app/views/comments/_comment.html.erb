@@ -10,13 +10,23 @@
   </p>
 
   <p>
+    <strong>User:</strong>
+    <%= comment.user.username %>
+  </p>
+
+  <p>
+    <strong>Subreddit:</strong>
+    <%= comment.post.subreddit.name %>
+  </p>
+
+  <p>
     <strong>Post:</strong>
     <%= comment.post.title %>
   </p>
 
   <p>
-    <strong>User:</strong>
-    <%= comment.user.username %>
+    <strong>Created at:</strong>
+    <%= comment.created_at %>
   </p>
 
 </div>

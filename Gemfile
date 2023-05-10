@@ -72,4 +72,4 @@ group :development do
   gem 'rubocop-rspec', require: false
 end
 
-gem "pagy", "~> 6.0"
+gem 'pagy', '~> 6.0'

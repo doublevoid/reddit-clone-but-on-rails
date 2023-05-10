@@ -73,7 +73,7 @@ RSpec.describe '/subreddits', type: :request do
       it 'does not create a new Subreddit' do
         expect do
           post subreddits_url, params: { subreddit: invalid_attributes }
-        end.to change(Subreddit, :count).by(0)
+        end.not_to change(Subreddit, :count)
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
