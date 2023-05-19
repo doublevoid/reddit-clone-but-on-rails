@@ -4,11 +4,5 @@
 Post karma: <%= @user.post_karma %>
 Comment karma: <%= @user.comment_karma %>
 
-<div id="comments">
-  <% @overall.each do |entry| %>
-    <%= render "comments/comment", comment: entry if entry.class.name == 'Comment' %>
-    <%= render "posts/post", post: entry if entry.class.name == 'Post' %>
-  <% end %>
-</div>
-
-<%= link_to "New comment", new_comment_path %>
+<div id="posts"></div>
+<%= turbo_frame_tag "pagination", src: user_page_path(format: :turbo_stream), loading: :lazy %>

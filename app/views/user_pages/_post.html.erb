@@ -1,0 +1,33 @@
+<div id="<%= dom_id post %>">
+  <%= post.karma || 0 %>
+
+  <p>
+    <strong>Title:</strong>
+    <%= post.post_title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= post.body %>
+  </p>
+
+  <p>
+    <strong>Subreddit:</strong>
+    <%= post.subreddit_name %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= post.username %>
+  </p>
+
+  <p>
+    <strong>Created at:</strong>
+    <%= post.created_at %>
+  </p>
+
+  <p>
+    <%= pluralize(post.comment_count, 'comment')%>
+  </p>
+
+</div>

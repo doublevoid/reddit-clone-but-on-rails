@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   get '/', to: 'subreddits#frontpage'
   get '/r/all', to: 'subreddits#all'
   resources :subreddits, path: 'r', param: :subreddit_name
-  resources :user_pages, path: 'u'
+  resources :user_pages, path: 'u' do
+    collection do
+      post :show
+    end
+  end
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
