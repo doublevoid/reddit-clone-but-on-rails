@@ -35,12 +35,12 @@ class UserPageEntry < ApplicationRecord
       Post
         .joins(:subreddit)
         .joins(:user)
-        .joins(:comments)
-        .joins("LEFT JOIN votes on votes.voteable_type = 'Comment' AND votes.voteable_id = comments.id")
+        .left_joins(:comments)
+        .joins("LEFT JOIN votes on votes.voteable_type = 'Post' AND votes.voteable_id = posts.id")
         .select("posts.id, 'post' as entry_type, posts.created_at, sum(votes.value) as karma, count(comments.id) AS
                     comment_count, users.username AS username, posts.title AS post_title, posts.body,
                            subreddits.name as subreddit_name, null as post_id")
-        .group('comments.id, votes.id, posts.id, users.id, subreddits.id')
+        .group('posts.id, users.id, subreddits.id')
         .where('users.username = ?', user_id).arel
     end
 
@@ -50,10 +50,10 @@ class UserPageEntry < ApplicationRecord
         .joins(:user)
         .joins(:post)
         .joins("LEFT JOIN votes on votes.voteable_type = 'Comment' AND votes.voteable_id = comments.id")
-        .select("posts.id, 'comment' as entry_type, comments.created_at, sum(votes.value) as karma, null AS
+        .select("comments.id, 'comment' as entry_type, comments.created_at, sum(votes.value) as karma, null AS
                     comment_count, users.username AS username, posts.title AS post_title, comments.body,
                            subreddits.name as subreddit_name, posts.id as post_id")
-        .group('comments.id, votes.id, posts.id, users.id, subreddits.id')
+        .group('comments.id, posts.id, users.id, subreddits.id')
         .where('users.username = ?', user_id).arel
     end
   end
