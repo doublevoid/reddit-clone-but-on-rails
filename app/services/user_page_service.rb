@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class UserPageService
-  include Pagy::Backend
-  attr_reader :user, :pagy, :overall, :username
+  attr_reader :user, :data
 
   def initialize(username)
     @username = username
@@ -10,6 +9,7 @@ class UserPageService
 
   def fetch_details
     @user = fetch_user_with_karma
+    @data = UserPageEntry.union_query(@username)
   end
 
   private

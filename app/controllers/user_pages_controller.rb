@@ -5,7 +5,7 @@ class UserPagesController < ApplicationController
     user_page_service.fetch_details
 
     @user = user_page_service.user
-    @pagy, @overall = pagy_countless(UserPageEntry.union_query(user_page_service.username))
+    @pagy, @overall = pagy_countless(user_page_service.data)
 
     respond_to do |format|
       format.html
