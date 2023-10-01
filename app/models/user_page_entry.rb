@@ -18,7 +18,7 @@ class UserPageEntry < ApplicationRecord
   end
 
   class << self
-    def get_entries(user_id, *args)
+    def union_query(user_id, *_args)
       query = Arel::Nodes::As.new(
         Arel::Nodes::UnionAll.new(
           posts_query(user_id),
@@ -26,7 +26,7 @@ class UserPageEntry < ApplicationRecord
         ),
         Vote.arel_table
       )
-      UserPageEntry.from(query).where(*args).order(created_at: :desc)
+      UserPageEntry.from(query).order(created_at: :desc)
     end
 
     private

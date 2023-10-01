@@ -3,4 +3,8 @@ class Comment < ApplicationRecord
 
   belongs_to :post
   belongs_to :user
+
+  def karma
+    votes.sum(:value)
+  end
 end
