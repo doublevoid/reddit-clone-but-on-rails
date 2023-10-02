@@ -1,4 +1,3 @@
-# app/services/comment_service.rb
 class CommentService
   def self.all_comments
     Comment.all

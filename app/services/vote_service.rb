@@ -1,4 +1,3 @@
-# app/services/vote_service.rb
 class VoteService
   def self.all_votes
     Vote.all
