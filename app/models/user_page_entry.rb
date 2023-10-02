@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# This model does not have an actual table in the database.
+# It is a virtual model that is created by the union of two queries.
+# This is done so the user page can display both posts and comments while keeping pagination using Pagy.
+
 class UserPageEntry < ApplicationRecord
   self.table_name = 'votes'
   attribute :id, :integer
