@@ -15,11 +15,23 @@ class UserPageService
   private
 
   def fetch_user_with_karma
-    User.joins(:posts, :comments)
-        .joins("JOIN votes AS c_votes on c_votes.voteable_id = comments.id AND c_votes.voteable_type = 'Comment'")
-        .joins("JOIN votes AS p_votes on p_votes.voteable_id = posts.id AND p_votes.voteable_type = 'Post'")
-        .select('SUM(c_votes.value) AS comment_karma, SUM(p_votes.value) AS post_karma, users.*')
-        .group('comments.id, users.id')
-        .where(username: @username)[0]
+    post_karma = User
+                 .joins(posts: :votes)
+                 .where(votes: { voteable_type: 'Post' })
+                 .group('users.id')
+                 .select('users.id, SUM(votes.value) AS post_karma')
+
+    comment_karma = User
+                    .joins(comments: :votes)
+                    .where(votes: { voteable_type: 'Comment' })
+                    .group('users.id')
+                    .select('users.id, SUM(votes.value) AS comment_karma')
+
+    User
+      .joins("LEFT JOIN (#{post_karma.to_sql}) AS post_karma_sub ON post_karma_sub.id = users.id")
+      .joins("LEFT JOIN (#{comment_karma.to_sql}) AS comment_karma_sub ON comment_karma_sub.id = users.id")
+      .select('users.*, COALESCE(post_karma_sub.post_karma, 0) AS post_karma, COALESCE(comment_karma_sub.comment_karma, 0) AS comment_karma')
+      .where(username: @username)
+      .first
   end
 end
